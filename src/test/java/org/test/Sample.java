@@ -28,5 +28,10 @@ public class Sample extends LibGlobal {
 		driver.findElement(By.id("pass")).sendKeys(s1);
 	}
 
-
+	@Parameters({"username","password"})
+	@Test
+	private void tc1(String s,String s1) {
+		driver.findElement(By.id("email")).sendKeys(s);
+		driver.findElement(By.id("pass")).sendKeys(s1);
+	}
 }
